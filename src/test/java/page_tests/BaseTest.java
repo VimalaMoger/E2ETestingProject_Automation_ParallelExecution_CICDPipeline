@@ -103,7 +103,7 @@ public class BaseTest {
                 co.addArguments("--no-sandbox");
                 co.addArguments("--remote-allow-origins**");
                 WebDriverManager.chromedriver().clearDriverCache().setup();
-                driver = new ChromeDriver();
+                driver = new ChromeDriver(co);
             }else
                 logger.error("Platform not supported! ");
         }else {
