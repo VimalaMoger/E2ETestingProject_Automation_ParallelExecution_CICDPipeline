@@ -1,7 +1,6 @@
 In this Project, I delved into understanding TestNG features such as Annotations/TestNG Listerners to customize test behavior i.e logging, reporting Base-64, when test fails or passes. Implemented listeners to capture and log events,
 - Parallally executed both tests in Maven POM.xml or using TestNG xml file
 - Docker- installed docker desktop, performed test code execution
-Tasks including:
 - GitHub push/actions
 - Execute the code in Jenkins
 
