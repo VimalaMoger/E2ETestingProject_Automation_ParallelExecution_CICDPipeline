@@ -6,13 +6,13 @@
         <listener class-name="MyListener"/>
     </listeners>
     <test name = "Test1">
-       <parameter name="browserName" value="chrome"></parameter>
+<!--       <parameter name="browserName" value="chrome"></parameter>-->
         <classes>
             <class name = "page_tests.LoginPageTests"/>
         </classes>
     </test>
     <test name = "Test2">
-       <parameter name="browserName" value="firefox"></parameter>
+<!--       <parameter name="browserName" value="firefox"></parameter>-->
         <classes>
             <class name = "page_tests.ProductPageTests"/>
         </classes>
