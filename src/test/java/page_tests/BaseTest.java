@@ -101,8 +101,9 @@ public class BaseTest {
                 co.addArguments("--headless");  //for github actions
                 co.addArguments("--disable-gpu");
                 co.addArguments("--no-sandbox");
-                co.addArguments("--remote-allow-origins**");
-                WebDriverManager.chromedriver().clearDriverCache().setup();
+                //co.addArguments("--remote-allow-origins**");
+                co.addArguments("--remote-allow-origins=*","ignore-certificate-errors");
+                WebDriverManager.chromedriver().setup();//.clearDriverCache().setup();
                 driver = new ChromeDriver(co);
             }else
                 logger.error("Platform not supported! ");
