@@ -101,6 +101,7 @@ public class BaseTest {
                 co.addArguments("--headless");  //for github actions
                 co.addArguments("--disable-gpu");
                 co.addArguments("--no-sandbox");
+                co.setCapability("browserVersion", "131.0.6778.86");
                 //co.addArguments("--remote-allow-origins**");
                 co.addArguments("--remote-allow-origins=*","ignore-certificate-errors");
                 WebDriverManager.chromedriver().setup();//.clearDriverCache().setup();
