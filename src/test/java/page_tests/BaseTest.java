@@ -19,7 +19,7 @@ import java.net.URL;
 import static utils.ExtentReportHelper.getReportsObject;
 
 public class BaseTest {
-    public static WebDriver driver;
+    public WebDriver driver;
     protected String browser;
 
     protected static ThreadLocal<ExtentTest> testLogger = new ThreadLocal<>();
@@ -47,8 +47,8 @@ public class BaseTest {
         if (browser.equalsIgnoreCase("firefox")) {
             if (AppConstants.platform.equalsIgnoreCase("local")) {
                 fo.addArguments("--remote-allow-origins**");
-                WebDriverManager.firefoxdriver().setup();
-                driver = new FirefoxDriver();
+                WebDriverManager.firefoxdriver().clearDriverCache().setup();
+                driver = new FirefoxDriver(fo);
             } else if (AppConstants.platform.equalsIgnoreCase("remote")) {
                 fo.addArguments("--remote-allow-origins**");
                 fo.setPlatformName("linux");
@@ -59,7 +59,7 @@ public class BaseTest {
                 } catch (MalformedURLException e) {
                     throw new RuntimeException(e);
                 }
-            }else if(AppConstants.platform.equalsIgnoreCase("remote_grid")){
+            }else if(AppConstants.platform.equalsIgnoreCase("remote_grid")) {
                 fo.addArguments("--remote-allow-origins**");
                 fo.setPlatformName("linux");
                 fo.setPageLoadStrategy(PageLoadStrategy.EAGER);
@@ -69,14 +69,24 @@ public class BaseTest {
                 } catch (MalformedURLException e) {
                     throw new RuntimeException(e);
                 }
+            }else if(AppConstants.platform.equalsIgnoreCase("remote_git")){
+                fo.addArguments("--headless");  //for github actions
+                fo.addArguments("--disable-gpu");
+                fo.addArguments("--no-sandbox");
+                //co.setCapability("browserVersion", "134.0.6998.88");
+                //co.addArguments("--remote-allow-origins**");
+                fo.addArguments("--remote-allow-origins=*");
+                WebDriverManager.firefoxdriver().setup();//.clearDriverCache().setup();
+                driver = new FirefoxDriver(fo);
             }else
                 logger.error("Platform not supported!");
         }else if (browser.equalsIgnoreCase("chrome")) {
             if (AppConstants.platform.equalsIgnoreCase("local")) {
+                //co.setCapability("browserVersion", "132.0.6778.86");
                 co.addArguments("--remote-allow-origins**");
                 //co.addArguments("--disable-dev-shm-usage");
                 WebDriverManager.chromedriver().clearDriverCache().setup();
-                driver = new ChromeDriver();
+                driver = new ChromeDriver(co);
             } else if (AppConstants.platform.equalsIgnoreCase("remote")) {
                 co.addArguments("--remote-allow-origins**");
                 co.setPlatformName("linux");
@@ -101,9 +111,9 @@ public class BaseTest {
                 co.addArguments("--headless");  //for github actions
                 co.addArguments("--disable-gpu");
                 co.addArguments("--no-sandbox");
-                co.setCapability("browserVersion", "131.0.6778.86");
+                //co.setCapability("browserVersion", "134.0.6998.88");
                 //co.addArguments("--remote-allow-origins**");
-                co.addArguments("--remote-allow-origins=*","ignore-certificate-errors");
+                co.addArguments("--remote-allow-origins=*");
                 WebDriverManager.chromedriver().setup();//.clearDriverCache().setup();
                 driver = new ChromeDriver(co);
             }else

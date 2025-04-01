@@ -38,7 +38,7 @@ public class MyListener extends BaseTest implements ITestListener {
 
         @Override
         public void onFinish(ITestContext context) {
-            driver.quit();
+            //driver.quit();
         }
 
         @Override
@@ -47,7 +47,6 @@ public class MyListener extends BaseTest implements ITestListener {
 
         @Override
         public void onTestFailedButWithinSuccessPercentage(ITestResult iTestResult) {
-            //driver.quit();
         }
 
         @Override
