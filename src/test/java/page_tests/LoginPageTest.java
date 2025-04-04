@@ -6,9 +6,7 @@ import org.testng.annotations.Test;
 import page_objects.LoginPageObject;
 import page_objects.ProductsPageObject;
 
-
 public class LoginPageTest extends BaseTest{
-
     LoginPageObject loginPageObject;
     ProductsPageObject productsPageObject;
     private static final Logger logger = LogManager.getLogger(BaseTest.class);

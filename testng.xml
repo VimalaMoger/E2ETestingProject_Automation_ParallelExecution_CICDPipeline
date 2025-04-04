@@ -8,7 +8,7 @@
     <test name = "Test1">
 <!--       <parameter name="browserName" value="chrome"></parameter>-->
         <classes>
-            <class name = "page_tests.LoginPageTest"/>
+            <class name = "moger.example.LoginPageTest"/>
         </classes>
     </test>
     <test name = "Test2">
