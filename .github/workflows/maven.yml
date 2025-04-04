@@ -37,7 +37,7 @@ jobs:
           distribution: 'temurin'
           cache: maven
 
-      - name: Build using testng xml files
+      - name: Build using testng xml file
         run: >
           mvn clean test
           -DbrowserName=${{inputs.browsername}}
