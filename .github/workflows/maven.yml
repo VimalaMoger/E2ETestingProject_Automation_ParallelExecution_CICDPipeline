@@ -36,12 +36,10 @@ jobs:
           java-version: '22'
           distribution: 'temurin'
           cache: maven
-      - name: Build using testng xml file
+
+      - name: Build using testng xml files
         run: >
           mvn clean test
-          -Dsurefire.suiteXmlFiles=${{inputs.xmlfilename}}
-  #        -DsmokeORregression=${{inputs.xmlfilename}}
-          -DbrowserName=${{inputs.browsername}}
           -Dmaven.test.failure.ignore=true
 
   #     Report generation
