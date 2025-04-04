@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="All Test Suite"> <!--parallel="tests" thread-count="2">-->
+<suite name="All Test Suite" parallel="tests" thread-count="2">
     <listeners>
         <listener class-name="MyListener"/>
     </listeners>
     <test name = "Test1">
-<!--       <parameter name="browserName" value="chrome"></parameter>-->
+       <parameter name="browserName" value="chrome"></parameter>
         <classes>
             <class name = "page_tests.LoginPageTest"/>
         </classes>
     </test>
     <test name = "Test2">
-<!--       <parameter name="browserName" value="firefox"></parameter>-->
+       <parameter name="browserName" value="firefox"></parameter>
         <classes>
             <class name = "page_tests.ProductPageTest"/>
         </classes>
