@@ -112,7 +112,6 @@ public class BaseTest {
                 co.addArguments("--disable-gpu");
                 co.addArguments("--no-sandbox");
                 //co.setCapability("browserVersion", "134.0.6998.88");
-                //co.addArguments("--remote-allow-origins**");
                 co.addArguments("--remote-allow-origins=*");
                 WebDriverManager.chromedriver().setup();//.clearDriverCache().setup();
                 driver = new ChromeDriver(co);

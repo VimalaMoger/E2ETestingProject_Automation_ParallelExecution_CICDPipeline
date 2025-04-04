@@ -8,13 +8,13 @@
     <test name = "Test1">
 <!--       <parameter name="browserName" value="chrome"></parameter>-->
         <classes>
-            <class name = "page_tests.LoginPageTests"/>
+            <class name = "page_tests.LoginPageTest"/>
         </classes>
     </test>
     <test name = "Test2">
 <!--       <parameter name="browserName" value="firefox"></parameter>-->
         <classes>
-            <class name = "page_tests.ProductPageTests"/>
+            <class name = "page_tests.ProductPageTest"/>
         </classes>
     </test>
 </suite>

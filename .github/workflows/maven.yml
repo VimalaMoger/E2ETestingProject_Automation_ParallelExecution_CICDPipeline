@@ -40,7 +40,8 @@ jobs:
       - name: Build using testng.xml files
         run: >
           mvn clean test
-          -Dsurefire.suiteXmlFiles=${{inputs.xmlfilename}}
+  #        -Dsurefire.suiteXmlFiles=${{inputs.xmlfilename}}
+          -DsmokeORregression=${{inputs.xmlfilename}}
           -DbrowserName=${{inputs.browsername}}
           -Dmaven.test.failure.ignore=true
 
