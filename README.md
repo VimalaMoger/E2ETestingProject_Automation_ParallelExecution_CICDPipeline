@@ -1,4 +1,4 @@
-In this Project, I delved into understanding TestNG features such as Annotations/TestNG Listerners to customize test behavior i.e logging, reporting Base-64, after when test fails or passes. Implemented listeners to capture and log events,
+In this Project, I delved into understanding of TestNG features such as Annotations/TestNG Listeners to customize test behavior i.e logging, reporting Base-64, after when test fails or passes. Implemented listeners to capture and log events,
 - Parallally executed both tests in Maven POM.xml or using TestNG xml file
 - Docker- installed docker desktop, performed test code execution
 - GitHub push/actions
@@ -9,6 +9,6 @@ Implied test strategy using TestNG(parameterization-receives browserName).
 Included additional code for taking screenshots saving to a file. 
 Generated reports based on whether test fails or passes with screenshot attached.
 Ran the test code in docker container both standalone and in selenium grid, creating nodes for both chrome and firefox browsers. Developed docker-compose files for both.
-Handled the Some of Docker and browser errors, done with code execution.
+Handled the some of Docker and browser errors, done with code execution.
 
 
