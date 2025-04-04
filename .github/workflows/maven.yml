@@ -41,6 +41,7 @@ jobs:
         run: >
           mvn clean test
           -DbrowserName=${{inputs.browsername}}
+          -DsmokeORregression=${{inputs.xmlfilename}}
           -Dmaven.test.failure.ignore=true
 
   #     Report generation
