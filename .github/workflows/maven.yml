@@ -14,7 +14,7 @@ on:
       browsername:
         type: string
         description: 'browser name'
-        default: 'chrome'
+       # default: 'chrome'
       xmlfilename:
         type: string
         description: 'enter suite xml file name'
@@ -40,7 +40,6 @@ jobs:
       - name: Build using testng xml file
         run: >
           mvn clean test
-          -DbrowserName=${{inputs.browsername}}
           -Dsurefire.suiteXmlFiles=${{inputs.xmlfilename}}
           -Dmaven.test.failure.ignore=true
 
