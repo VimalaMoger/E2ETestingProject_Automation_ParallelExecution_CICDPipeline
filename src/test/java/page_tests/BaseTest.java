@@ -59,6 +59,16 @@ public class BaseTest {
                 } catch (MalformedURLException e) {
                     throw new RuntimeException(e);
                 }
+            }else if (AppConstants.platform.equalsIgnoreCase("remote_jenkins")) {
+                fo.addArguments("--remote-allow-origins**");
+                fo.setPlatformName("linux");
+                fo.setPageLoadStrategy(PageLoadStrategy.EAGER);
+                try {
+                    //grid firefox and system ip address instead of localhost, 4444 is port to selenium grid
+                    driver = new RemoteWebDriver(new URL("http://192.168.1.69:4444/wd/hub"), fo);
+                } catch (MalformedURLException e) {
+                    throw new RuntimeException(e);
+                }
             }else if(AppConstants.platform.equalsIgnoreCase("remote_grid")) {
                 fo.addArguments("--remote-allow-origins**");
                 fo.setPlatformName("linux");
@@ -92,8 +102,18 @@ public class BaseTest {
                 co.setPlatformName("linux");
                 co.setPageLoadStrategy(PageLoadStrategy.EAGER);
                 try {
+                    //grid chrome and system ip address instead of localhost, 4444 is port to selenium grid
+                    driver = new RemoteWebDriver(new URL("http://192.168.1.69:4444/wd/hub"), co);
+                } catch (MalformedURLException e) {
+                    throw new RuntimeException(e);
+                }
+            }else if (AppConstants.platform.equalsIgnoreCase("remote_jenkins")) {
+                co.addArguments("--remote-allow-origins**");
+                co.setPlatformName("linux");
+                co.setPageLoadStrategy(PageLoadStrategy.EAGER);
+                try {
                     //remote webdriver url for selenium standalone browser
-                    driver = new RemoteWebDriver(new URL("http://localhost:4442"), co);
+                    driver = new RemoteWebDriver(new URL("http://localhost:4441"), co);
                 } catch (MalformedURLException e) {
                     throw new RuntimeException(e);
                 }
