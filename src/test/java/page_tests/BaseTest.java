@@ -102,8 +102,8 @@ public class BaseTest {
                 co.setPlatformName("linux");
                 co.setPageLoadStrategy(PageLoadStrategy.EAGER);
                 try {
-                    //grid chrome and system ip address instead of localhost, 4444 is port to selenium grid
-                    driver = new RemoteWebDriver(new URL("http://192.168.1.69:4444/wd/hub"), co);
+                    //remote webdriver url for selenium standalone browser
+                    driver = new RemoteWebDriver(new URL("http://localhost:4441"), co);
                 } catch (MalformedURLException e) {
                     throw new RuntimeException(e);
                 }
@@ -112,8 +112,8 @@ public class BaseTest {
                 co.setPlatformName("linux");
                 co.setPageLoadStrategy(PageLoadStrategy.EAGER);
                 try {
-                    //remote webdriver url for selenium standalone browser
-                    driver = new RemoteWebDriver(new URL("http://localhost:4441"), co);
+                    //grid chrome and system ip address instead of localhost, 4444 is port to selenium grid
+                    driver = new RemoteWebDriver(new URL("http://192.168.1.69:4444/wd/hub"), co);
                 } catch (MalformedURLException e) {
                     throw new RuntimeException(e);
                 }
