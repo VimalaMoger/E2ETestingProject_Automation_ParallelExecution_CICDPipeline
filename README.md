@@ -4,7 +4,7 @@ TestNG features such as Annotations and TestNG Listeners to customize test behav
 - Parallally executed both tests in Maven POM and TestNG xml file across multiple platforms
 - Docker- Installed Docker Desktop, Docker yaml setup, Ran the test code in Docker Container for both Standalone and in Selenium Grid. 
 - GitHub push/actions - executed the test code using in testng.xml(Multiple Browsers)(CI/CD and manual setup)
-- Executed the code in Jenkins running Docker container
+- Executed the code in Jenkins running in Docker container
 
 In this project, I worked with selenium, focusing on xpath locator strategy to be able to locate web elements. Automated the process and printed the Products Overview page Title and first product name to the console. Implied test strategy using TestNG(parameterization)
 Included additional code for taking screenshots, saving to a file. 
