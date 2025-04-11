@@ -1,5 +1,5 @@
 Creation of Test Automation Framework using Java and Selenium: 
-Covered Selenium Webdriver, Java, Page Object Model, Custom Maven set up, Custom Maven command set up and execution, Custom Reporting and Logging Mechanism, Cross-Browser compatibility testing, POM,  TestNG, Docker, GitHub Actions, Jenkins.
+Employed Selenium Webdriver, Java, Page Object Model, Custom Maven set up, Custom Maven command set up and execution, Custom Reporting and Logging Mechanism, Cross-Browser compatibility testing, POM,  TestNG, Docker, GitHub Actions, Jenkins.
 TestNG features such as Annotations and TestNG Listeners to customize test behavior like logging, reporting(Base-64 format), after when test fails or passes.
 - Parallally executed both tests in Maven POM and TestNG xml file across multiple platforms
 - Docker- Installed Docker Desktop, Docker yaml setup, Ran the test code in Docker Container for both Standalone and in Selenium Grid. 

@@ -65,7 +65,7 @@ public class BaseTest {
                 fo.setPageLoadStrategy(PageLoadStrategy.EAGER);
                 try {
                     //grid firefox and system ip address instead of localhost, 4444 is port to selenium grid
-                    driver = new RemoteWebDriver(new URL("http://"This_Machine_ip_address":4444/wd/hub"), fo);
+                    driver = new RemoteWebDriver(new URL("http://This_Machine_ip_address:4444/wd/hub"), fo);
                 } catch (MalformedURLException e) {
                     throw new RuntimeException(e);
                 }
@@ -113,7 +113,7 @@ public class BaseTest {
                 co.setPageLoadStrategy(PageLoadStrategy.EAGER);
                 try {
                     //grid chrome and system ip address instead of localhost, 4444 is port to selenium grid
-                    driver = new RemoteWebDriver(new URL("http://"This_Machine_ip_address":4444/wd/hub"), co);
+                    driver = new RemoteWebDriver(new URL("http://This_Machine_ip_address:4444/wd/hub"), co);
                 } catch (MalformedURLException e) {
                     throw new RuntimeException(e);
                 }
